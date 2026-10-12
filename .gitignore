@@ -1,0 +1,25 @@
+# Python bytecode and tooling
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and build output
+.venv/
+venv/
+dist/
+build/
+
+# Local runtime state and secrets
+logs/
+.env
+*.local.json
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

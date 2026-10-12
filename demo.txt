@@ -1,0 +1,29 @@
+ValutaTrade Hub — демонстрационный сценарий
+
+register --username Ручкин --password 1234
+Пользователь 'Ручкин' зарегистрирован (id=1).
+
+login --username Ручкин --password 1234
+Вы вошли как 'Ручкин'
+
+buy --currency USD --amount 1000
+Покупка выполнена: 1000.0000 USD
+
+buy --currency BTC --amount 0.01
+Покупка выполнена: 0.0100 BTC
+
+show-portfolio
+Портфель пользователя 'Ручкин' (база: USD)
+
+sell --currency BTC --amount 0.001
+Продажа выполнена: 0.0010 BTC
+
+get-rate --from BTC --to USD
+Курс BTC→USD: 60000.00000000
+
+show-rates --top 2
+Курсы из кеша
+
+Ошибка:
+sell --currency BTC --amount 99
+Недостаточно средств

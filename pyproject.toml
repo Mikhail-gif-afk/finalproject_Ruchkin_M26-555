@@ -1,0 +1,44 @@
+[project]
+name = "finalproject-ruchkin-m26-555"
+version = "1.0.0"
+description = "Консольная платформа виртуальной торговли валютами ValutaTrade Hub"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "prettytable>=3.12.0",
+    "requests>=2.32.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "ruff>=0.8.0",
+]
+
+[project.scripts]
+valutatrade-hub = "valutatrade_hub.cli.interface:main"
+
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["valutatrade_hub"]
+
+[tool.valutatrade]
+rates_ttl_seconds = 300
+default_base_currency = "USD"
+log_format = "%(levelname)s %(asctime)s %(name)s %(message)s"
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["valutatrade_hub", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "lf"
